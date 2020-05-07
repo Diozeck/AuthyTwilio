@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /config.ru
+    destination: /home/ec2-user/ruby-sinatra
+  - source: /Gemfile
+    destination: /home/ec2-user/ruby-sinatra
+  - source: /backend.rb
+    destination: /home/ec2-user/ruby-sinatra
+hooks:
+  AfterInstall:
+    - location: scripts/install_dependencies
+      timeout: 1800
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 300
+      runas: root

@@ -1,0 +1,7 @@
+{
+  "name": "Authy SDK",
+  "description": "Authy SDK",
+  "repository": "https://github.com/Diozeck/AuthySdk.git",
+  "logo": "https://www.authy.com/img/logos/authy-2fa.svg",
+  "keywords": ["ruby", "authy", "sdk"]
+}
