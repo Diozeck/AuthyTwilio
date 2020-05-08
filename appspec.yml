@@ -7,8 +7,6 @@ files:
     destination: /home/ec2-user/ruby-sinatra
   - source: /backend.rb
     destination: /home/ec2-user/ruby-sinatra
-  - source: /env.rb
-    destination: /home/ec2-user/ruby-sinatra
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies
