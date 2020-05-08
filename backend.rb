@@ -42,7 +42,7 @@ get "/" do
   DOCUMENTATION
 end
 
-post "/registro" do
+post "/registration" do
   param :authy_id, Integer, required: true
 
   params_for_authy = build_params_for_authy(params[:authy_id])
