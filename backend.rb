@@ -42,7 +42,7 @@ get "/" do
   DOCUMENTATION
 end
 
-post "/registration" do
+post "/registro" do
   param :authy_id, Integer, required: true
 
   params_for_authy = build_params_for_authy(params[:authy_id])
@@ -53,7 +53,7 @@ post "/registration" do
   parsed_response = JSON.parse(response.body)
 
   if response_code == 200
-    respond_with status: response_code, body: {registration_token: parsed_response["registration_token"] }
+    respond_with status: response_code, body: {token: parsed_response["registration_token"] }
 
   else
     respond_with status: response_code, body: parsed_response
