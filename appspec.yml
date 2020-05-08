@@ -9,12 +9,6 @@ files:
     destination: /home/ec2-user/ruby-sinatra
   - source: /env.rb
     destination: /home/ec2-user/ruby-sinatra
-  - source: /Gemfile.lock
-    destination: /home/ec2-user/ruby-sinatra
-  - source: /app.json
-    destination: /home/ec2-user/ruby-sinatra
-  - source: /Procfile
-    destination: /home/ec2-user/ruby-sinatra
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies
